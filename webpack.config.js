@@ -2,19 +2,29 @@ var path = require("path");
 var webpack = require('webpack');
 var node_modules_dir = path.resolve(__dirname, 'node_modules');
 var BundleTracker = require('webpack-bundle-tracker');
+var build_dir = path.resolve(__dirname,'static/bundles/');
+var commonsPlugin =
+    new webpack.optimize.CommonsChunkPlugin('vendors','common.js');
 
 module.exports = {
   context: __dirname,
 
-  entry: './static/react/index',
+  entry: {
+      index :[ './static/react/index'
+        ],
+
+        vendors: ['react','react-dom']
+
+  },
 
   output: {
-      path: path.resolve('./static/bundles/'),
+      path: build_dir,
       filename: "[name]-[hash].js"
   },
 
   plugins: [
-    new BundleTracker({filename: './webpack-stats.json'})
+    new BundleTracker({filename: './webpack-stats.json'}),
+      commonsPlugin
   ],
 
   module: {
@@ -28,8 +38,7 @@ module.exports = {
                 loaders: ['babel-loader?stage=0'] // The module to load. "babel" is short for "babel-loader"
             },
             { test: /\.scss$/, loader: 'style!css!sass?sourceMap' },
-            { test: /\.css$/, loader: 'style-loader!css-loader' },
-            { test: /\.(png|ttf|woff|jpg|jpeg)$/, loader: 'file-loader?limit=300000' }
+            { test: /\.css$/, loader: 'style-loader!css-loader' }
         ]
     },
   resolve: {

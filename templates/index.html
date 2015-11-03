@@ -1,13 +1,19 @@
 {% load render_bundle from webpack_loader %}
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Example</title>
+    <title>Pitchaman</title>
+      <link rel="shortcut icon" href="{% static "images/pitch/favicon.png" %}" type="image/x-icon" />
+      <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500italic,500,700,700italic' rel='stylesheet' type='text/css'>
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
   </head>
 
   <body>
+
+  <script type="text/javascript" src="{% static "bundles/common.js" %}"></script>
     <div id="react-app"></div>
-    {% render_bundle 'main' %}
+    {% render_bundle 'index' %}
   </body>
 </html>

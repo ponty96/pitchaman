@@ -3,6 +3,6 @@
  */
 import ReactDOM from 'react-dom'
 import React from 'react'
-import  HomeComponent from './components/test';
+import  HomePage from './components/home-page/home';
 
-ReactDOM.render(<HomeComponent />,document.getElementById('react-app'));
+ReactDOM.render(<HomePage />,document.getElementById('react-app'));

@@ -1,0 +1,63 @@
+@import "./../../styles/constants";
+
+.home-bg {
+  background: url("/static/images/pitch/pitchaman-info-graphics.jpg") no-repeat center center fixed;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+  & .idx-header {
+        background: $our_grey;
+        padding: 10px 13px;
+     & .brand {
+        & img {
+          width: 100%;
+          height: auto;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        & .tagline {
+          width: 100%;
+          height: auto;
+          display: inline-block;
+          font-family: Ubuntu;
+          font-size: 12px;
+          font-weight: bold;
+          margin-top:4px;
+          float: right;
+        }
+      }
+     & .authLinks {
+        float: right;
+        margin-top: 40px;
+
+          & span {
+            display: inline-block;
+            font-family: 'Ubuntu', san-serif;
+            font-size: 18px;
+            font-weight: bold;
+            margin:0 10px;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+       @media screen and (max-width: 768px) {
+         & {
+           float: left;
+           margin-top:20px;
+           & span {
+             display: block;
+             margin: 8px 0;
+           }
+         }
+       }
+      }
+  }
+}
