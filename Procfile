@@ -1,0 +1,1 @@
+web: gunicorn Pitchaman.wsgi --log-file -
