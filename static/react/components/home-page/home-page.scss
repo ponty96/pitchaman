@@ -9,6 +9,7 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  color: $text_color;
 
 
   & .idx-header {
@@ -26,9 +27,8 @@
           width: 100%;
           height: auto;
           display: inline-block;
-          font-family: Ubuntu;
+          @include font-Bold();
           font-size: 12px;
-          font-weight: bold;
           margin-top:4px;
           float: right;
         }
@@ -39,9 +39,8 @@
 
           & span {
             display: inline-block;
-            font-family: 'Ubuntu', san-serif;
+            @include font-Bold();
             font-size: 18px;
-            font-weight: bold;
             margin:0 10px;
 
             &:hover {
@@ -59,5 +58,27 @@
          }
        }
       }
+  }
+
+  & .punchline {
+    font-size: 35px;
+    color: #fff;
+    @include font-Bold();
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+
+  & .main-search {
+    position: fixed;
+    top: 65%;
+    right:40%;
+    left:35%;
+
+    @media screen and (max-width:768px) {
+      & {
+        left: 20%;
+        right: 20%;
+      }
+    }
   }
 }

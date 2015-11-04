@@ -1,2 +1,66 @@
-$our_grey: rgba(238, 238, 238, 0.55);
+$our_grey: rgba(238, 238, 238, 0.44);
+$our_blue:#20afcb;
+$text_color:#5d5d5d;
+$dark:#000;
 
+
+.black {
+  color: #000;
+}
+
+@mixin font-Bold(){
+  font-family: 'Ubuntu', san-serif;
+  font-weight: bold;
+}
+
+@mixin placeholder($fontSize,$color){
+  input:-moz-placeholder {
+    color:$color;
+    font-family: inherit;
+    font-size: $fontSize;
+    padding: 0 0 2px 0;
+  }
+  input:-ms-input-placeholder {
+    color:$color;
+    font-family: inherit;
+    font-size: $fontSize;
+    padding: 0 0 2px 0;
+  }
+
+  input::-webkit-input-placeholder{
+    color:$color;
+    font-family: inherit;
+    font-size: $fontSize;
+    padding: 0 0 2px 0;
+  }
+}
+
+
+@mixin all-transform($transform...){
+   -webkit-transform: $transform;
+      -moz-transform: $transform;
+      -ms-transform: $transform;
+      -o-transform: $transform;
+      transform: $transform;
+}
+
+@mixin float($pos){
+  float: $pos;
+  display: inline-block;
+}
+
+@mixin transition($transition){
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition:$transition;
+}
+
+@mixin l-gradient($val1...){
+
+  background: -moz-linear-gradient($val1);
+  background: -webkit-linear-gradient($val1);
+  background: -o-linear-gradient($val1);
+  background: linear-gradient($val1);
+}

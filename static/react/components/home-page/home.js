@@ -2,10 +2,14 @@
  * Created by ponty on 11/3/15.
  */
 import React,{Component} from 'react'
+import Search from './../reusable/search/search'
 require('./home-page.scss');
 
 export default class HomePage extends Component {
 
+    search = (text) => {
+        console.log('search word'+text)
+    }
     render() {
         return (
             <div className="home-bg">
@@ -25,6 +29,14 @@ export default class HomePage extends Component {
                             </div>
                         </div>
                     </header>
+                    <div className="row">
+                        <p className="text-right punchline">
+                            Business Potentials <span className="black">meet</span> Investors
+                        </p>
+                    </div>
+                    <div className="main-search">
+                    <Search className="search-box-big" onClickEnter={this.search}/>
+                    </div>
                 </div>
             </div>
         )

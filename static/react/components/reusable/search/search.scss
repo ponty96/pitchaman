@@ -1,0 +1,103 @@
+@import "./../../../styles/constants";
+
+.search-box {
+  height:inherit;
+  width: 300px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 2px 4px;
+  & input[type="text"] {
+    border:none;
+    background: none;
+    @include placeholder(14px,$dark);
+    border-left:1px solid $dark;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  & .icon {
+    display: inline-block;
+    padding: 3px 4px;
+    margin-right: 4px;
+
+    & .fa {
+      @include all-transform(rotate(80deg));
+    }
+  }
+}
+
+
+
+.search-box-big {
+  height:65px;
+  width: 430px;
+  background: $our_grey;
+  border-radius: 30px;
+  padding: 2px 4px;
+  @include font-Bold();
+  @include placeholder(22px,$dark);
+  & input[type="text"] {
+    height: 100%;
+    border:none;
+    font-size: 22px;
+    background: none;
+    border-left:1px solid $dark;
+    padding-left: 6px;
+    letter-spacing: 2px;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  & .icon {
+    display: inline-block;
+    padding: 6px 4px 0 4px;
+    margin-right: 5px;
+    margin-left: 5px;
+    color: $dark;
+
+    & .fa {
+      @include all-transform(rotate(80deg));
+      font-size: 33px;
+      text-align: center;
+    }
+  }
+
+  /*
+  responsive css media query for small devices
+  **/
+  @media screen and (max-width: 768px) {
+    width: 100%;
+
+  @include placeholder(18px,$dark);
+
+     & input[type="text"] {
+    height: 100%;
+    border:none;
+    font-size: 18px;
+    background: none;
+    border-left:1px solid $dark;
+    padding-left: 6px;
+    letter-spacing: 2px;
+       width: 70%;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  & .icon {
+    display: inline-block;
+    padding: 6px 4px 0 4px;
+    margin-right: 5px;
+    margin-left: 5px;
+    color: $dark;
+
+    & .fa {
+      @include all-transform(rotate(80deg));
+      font-size: 28px;
+      text-align: center;
+    }
+  }
+  }
+}
