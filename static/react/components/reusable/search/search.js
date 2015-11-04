@@ -8,6 +8,10 @@ require('./search.scss');
 export default class Search extends Component {
 
     keyPress = (e) => {
+        /**
+         * if the user clicks enter, we pass the value in
+         * the input field back to the parent component onClickEnter
+         * */
         if(e.which == 13 || e.keyCode == 13) {
             const text = e.target.value;
             this.props.onClickEnter(text);
@@ -33,5 +37,12 @@ Search.defaultProps = {
 
 Search.propTypes = {
     placeholder:PropTypes.string,
-    onClickEnter:PropTypes.func.isRequired
+    onClickEnter:PropTypes.func.isRequired,
+    className:PropTypes.string
 }
+
+/**
+ * Props => placeholder for the search element
+ * and the function that the parent component will use to get the text in the search component
+ *
+ * **/

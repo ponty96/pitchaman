@@ -68,6 +68,19 @@
     margin-top: 10px;
   }
 
+  & .auth-modals{
+    position: fixed;
+    top: 45%;
+    right:35%;
+    left:30%;
+
+    @media screen and (max-width:768px) {
+      & {
+        left: 20%;
+        right: 20%;
+      }
+    }
+  }
   & .main-search {
     position: fixed;
     top: 65%;

@@ -3,6 +3,9 @@ $our_blue:#20afcb;
 $text_color:#5d5d5d;
 $dark:#000;
 
+$facebook_blue:#1690a2;
+$google_plus_red: #ff0e18;
+
 
 .black {
   color: #000;
@@ -63,4 +66,12 @@ $dark:#000;
   background: -webkit-linear-gradient($val1);
   background: -o-linear-gradient($val1);
   background: linear-gradient($val1);
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }

@@ -1,0 +1,68 @@
+@import "./../../../styles/constants";
+.auth-modal {
+    @include font-Bold();
+    width: 550px;
+  @media screen and (max-width: 768px){
+    width: auto;
+  }
+  & .header{
+    padding: 8px 0;
+    background: rgba(102, 102, 102, 0.32);
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+
+    &.leftActive {
+      background: $facebook_blue;
+    }
+    &.rightActive {
+      background: $google_plus_red;
+    }
+
+  }
+
+  & .body {
+    display: inline-block;
+    background: #666;
+    height: auto;
+    padding: 30px 0;
+    width: 100%;
+    & .left {
+      margin-left: 40px;
+    }
+
+      & .right {
+      margin-right: 40px;
+    }
+
+    & .social-btn {
+      display: inline-block;
+      border:2px solid #fff;
+      height: 120px;
+      width: 120px;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &.left:hover {
+        background: $facebook_blue;
+        border:2px solid $facebook_blue;
+      }
+       &.right:hover {
+        background: $google_plus_red;
+        border:2px solid $google_plus_red;
+      }
+
+      &:active {
+        border:2px solid #fff;
+      }
+
+      & .fa {
+        font-size: 53px;
+        color: #fff;
+        display: inline-block;
+        padding: 28px 0 0 38px;
+      }
+    }
+  }
+
+}

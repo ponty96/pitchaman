@@ -3,6 +3,7 @@
  */
 import React,{Component} from 'react'
 import Search from './../reusable/search/search'
+import AuthModal from './../reusable/auth-modal/auth-modal'
 require('./home-page.scss');
 
 export default class HomePage extends Component {
@@ -33,6 +34,9 @@ export default class HomePage extends Component {
                         <p className="text-right punchline">
                             Business Potentials <span className="black">meet</span> Investors
                         </p>
+                    </div>
+                    <div className="auth-modals">
+                         <AuthModal/>
                     </div>
                     <div className="main-search">
                     <Search className="search-box-big" onClickEnter={this.search}/>
