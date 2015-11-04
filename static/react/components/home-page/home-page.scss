@@ -14,7 +14,6 @@
 
   & .idx-header {
         background: $our_grey;
-        padding: 10px 13px;
      & .brand {
         & img {
           width: 100%;
@@ -35,25 +34,30 @@
       }
      & .authLinks {
         float: right;
-        margin-top: 40px;
+
 
           & span {
             display: inline-block;
             @include font-Bold();
+            font-weight: bold;
             font-size: 18px;
-            margin:0 10px;
+            padding: 40px 10px 7px 10px;
 
             &:hover {
               cursor: pointer;
+              background: $hover_grey;
             }
           }
        @media screen and (max-width: 768px) {
          & {
            float: left;
            margin-top:20px;
+           width: 100%;
+           background: $dark;
            & span {
              display: block;
              margin: 8px 0;
+             padding: 10px 10px 7px 10px;
            }
          }
        }
@@ -74,6 +78,10 @@
     right:35%;
     left:30%;
 
+    &.hide {
+      display: none;
+    }
+
     @media screen and (max-width:768px) {
       & {
         left: 20%;
@@ -87,6 +95,9 @@
     right:40%;
     left:35%;
 
+    &.hide {
+      display: none;
+    }
     @media screen and (max-width:768px) {
       & {
         left: 20%;

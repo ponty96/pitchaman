@@ -26,18 +26,22 @@ export default class AuthModal extends Component{
         } else {
             headerClass = 'header';
         }
+
+        const facebook_Url = this.props.fbUrl;
+        const googleplus_url = this.props.gPlusUrl;
+        const title = this.props.title;
         return(
             <div className="auth-modal">
             <div className={headerClass}>
-                Login with
+                {title}
             </div>
                 <div className="body">
-                    <a className="social-btn left" href="http://dude.com"
+                    <a className="social-btn left" href={facebook_Url}
                        onMouseOver={() =>this.mouseOver('left')}
                          onMouseOut={() =>this.mouseOut()}>
                         <i className="fa fa-facebook"></i>
                      </a>
-                    <a className="social-btn right" href="http://dude.com"
+                    <a className="social-btn right" href={googleplus_url}
                        onMouseOver={() =>this.mouseOver('right')}
                          onMouseOut={() =>this.mouseOut()}>
                          <i className="fa fa-google-plus"></i>
@@ -48,6 +52,11 @@ export default class AuthModal extends Component{
     }
 }
 
+AuthModal.propTypes = {
+    fbUrl:PropTypes.string.isRequired,
+    gPlusUrl:PropTypes.string,
+    title:PropTypes.string.isRequired
+}
 /**
  * state => click
  * the effect here is obvious after viewing the page but will still explain here
@@ -55,5 +64,7 @@ export default class AuthModal extends Component{
  * the state of the component is automatically changed and the header bg color and also the bg color of the social btn
  * to the color of main color of the social auth provider
  *
+ *  props => facebook url && google url
+ *  Header title
  *
  * */
