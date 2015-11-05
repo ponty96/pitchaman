@@ -1,16 +1,20 @@
 @import "./../../../styles/constants";
 
 .search-box {
-  height:inherit;
+  height:30px;
   width: 300px;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 14px;
   padding: 2px 4px;
+  border:1px solid $border-color;
+  color: $text_color;
+
+    @include placeholder(14px,$text_color);
   & input[type="text"] {
     border:none;
     background: none;
-    @include placeholder(14px,$dark);
     border-left:1px solid $dark;
+    padding-left: 2px;
     &:focus {
       outline: none;
     }
@@ -19,7 +23,7 @@
   & .icon {
     display: inline-block;
     padding: 3px 4px;
-    margin-right: 4px;
+    margin-right: 2px;
 
     & .fa {
       @include all-transform(rotate(80deg));

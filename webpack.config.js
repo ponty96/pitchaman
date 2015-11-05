@@ -10,10 +10,12 @@ module.exports = {
   context: __dirname,
 
   entry: {
-      index :[ './static/react/index'
+      index :[ './static/react/components/home-page/index'
+        ],
+      profileNewPage :[ './static/react/components/profile-new-page/index'
         ],
 
-        vendors: ['react','react-dom']
+        vendors: ['react','react-dom','react-bootstrap']
 
   },
 

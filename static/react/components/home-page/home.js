@@ -25,7 +25,7 @@ export default class HomePage extends Component {
         const showAuth = this.state.showAuth;
         let main_search_class;
         let auth_modals_class;
-        let title;
+        let title = "";
         switch (showAuth){
             case 1:
               title = "Login With";

@@ -3,13 +3,29 @@ $hover_grey: rgba(238, 238, 238, 0.64);
 $our_blue:#20afcb;
 $text_color:#5d5d5d;
 $dark:#000;
+$border-color:#ccc;
 
 $facebook_blue:#1690a2;
 $google_plus_red: #ff0e18;
+$range_bg:#f4f3f5;
+$slider_item:#262626;
 
+$range_box_blue_selected:#25c9e9;
+$range_box_blue_un_selected:#c1ebff;
+
+$range_box_orange_selected:#f7941d;
+$range_box_orange_un_selected:#ffde97;
 
 .black {
   color: #000;
+}
+
+
+
+.blue {
+  color: $our_blue;
+  font-family: Ubuntu;
+  font-style: normal;
 }
 
 @mixin font-Bold(){
@@ -22,20 +38,20 @@ $google_plus_red: #ff0e18;
     color:$color;
     font-family: inherit;
     font-size: $fontSize;
-    padding: 0 0 2px 0;
+    padding: 0 0 2px 4px;
   }
   input:-ms-input-placeholder {
     color:$color;
     font-family: inherit;
     font-size: $fontSize;
-    padding: 0 0 2px 0;
+    padding: 0 0 2px 4px;
   }
 
   input::-webkit-input-placeholder{
     color:$color;
     font-family: inherit;
     font-size: $fontSize;
-    padding: 0 0 2px 0;
+    padding: 0 0 2px 4px;
   }
 }
 
@@ -76,3 +92,104 @@ $google_plus_red: #ff0e18;
 .right {
   float: right;
 }
+
+.blue-button {
+  border-radius: 8px;
+  background-image: -moz-linear-gradient( 90deg, rgb(32,175,203) 0%, rgb(40,220,255) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(32,175,203) 0%, rgb(40,220,255) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(32,175,203) 0%, rgb(40,220,255) 100%);
+  border:none;
+  &:hover {
+   box-shadow: 0.743px 0.669px 0px 0px rgb( 117, 117, 117 );
+  }
+  &:focus {
+    background-image: -moz-linear-gradient( -90deg, rgb(32,175,203) 0%, rgb(40,220,255) 100%);
+  background-image: -webkit-linear-gradient( -90deg, rgb(32,175,203) 0%, rgb(40,220,255) 100%);
+  background-image: -ms-linear-gradient( -90deg, rgb(32,175,203) 0%, rgb(40,220,255) 100%);
+    outline:none;
+    box-shadow: 0.743px 0.669px 0px 0px rgb( 117, 117, 117 );
+  }
+
+}
+
+
+.header {
+     background-image: -moz-linear-gradient( 90deg, rgb(233,233,233) 0%, rgb(255,255,255) 100%);
+     background-image: -webkit-linear-gradient( 90deg, rgb(233,233,233) 0%, rgb(255,255,255) 100%);
+     background-image: -ms-linear-gradient( 90deg, rgb(233,233,233) 0%, rgb(255,255,255) 100%);
+     height: 60px;
+     box-shadow: inset 0 -4px 10px 0 rgba(93, 93, 93, 0.30);
+
+    .logo {
+      padding: 8px 0 0 12px;
+      img {
+          width: auto;
+          height: auto;
+         }
+       &.bulb {
+          display: inline-block;
+          width: 30px;
+           margin: 3px 3px;
+
+       }
+    }
+}
+
+
+/** Custom Bootstrap Tab Style here*/
+
+.tabs-right {
+  margin-right: 5px;
+  & .nav-tabs {
+    position: absolute;
+    right: 0;
+    top: -35px;
+    z-index: 999;
+
+  }
+
+
+}
+
+
+.nav-tabs {
+  border-bottom: none;
+  font-size: 20px;
+  font-family: Ubuntu;
+}
+
+
+
+  .nav-tabs>li.active>a,
+  .nav-tabs>li.active>a:focus,
+  .nav-tabs>li.active>a:hover {
+    color: $our_blue;
+    cursor: default;
+    background-color: #fff;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-top: none;
+    border-bottom:2px solid transparent;
+    box-shadow:  2px 0 0 0 rgba(93, 93, 93, 0.3), -2px 0 0 0 rgba(93, 93, 93, 0.3);
+
+   }
+   .nav-tabs>li>a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border-radius: 4px 4px 0 0;
+     border-bottom: none;
+
+     &:focus {
+       outline: none;
+     }
+  }
+  .nav>li>a {
+    position: relative;
+    display: block;
+    padding: 5px 20px 0 20px;
+    color: $text_color;
+   }
+
+
+
+

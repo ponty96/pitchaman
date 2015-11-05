@@ -1,0 +1,90 @@
+@import "./../../../styles/constants";
+
+.noUi-horizontal .noUi-handle {
+    width: 20px;
+    height: 18px;
+    left: 0;
+    top: 2px;
+    border:none;
+    box-shadow: none;
+}
+
+.noUi-handle {
+    background-color: $slider_item;
+    margin-top: -4px;
+    cursor: pointer;
+
+}
+
+.noUi-connect {
+    display: block;
+    height: 6px;
+    -webkit-transition: background 450ms;
+    transition: background 450ms;
+}
+
+.noUi-target {
+    border-radius: 6px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.54);
+    border:none;
+
+}
+.noUi-background {
+
+}
+
+.noUi-tooltip{
+    background: $slider_item;
+    color: #fff;
+    top:20px;
+}
+
+
+.noUi-handle-lower .noUi-tooltip {
+    top:20px;
+
+
+}
+
+.noUi-marker.noUi-marker-horizontal.noUi-marker-normal{
+    display: none;
+}
+
+.noUi-marker.noUi-marker-horizontal {
+    display: none;
+}
+.noUi-value.noUi-value-horizontal.noUi-value-large{
+    bottom: 100%;
+    margin-bottom: 20px;
+}
+
+.noUi-handle::before,.noUi-handle::after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 14px;
+    width: 1px;
+    left: 14px;
+    top: 6px;
+    background:none;
+}
+
+
+#showcase {
+    text-align: center;
+}
+#range {
+    margin-top: 30px;
+    height: 16px;
+    width: 95%;
+}
+#value-span,
+#value-input {
+    width: 50%;
+    float: left;
+    display: block;
+    text-align: center;
+    margin: 0;
+}
+
+
