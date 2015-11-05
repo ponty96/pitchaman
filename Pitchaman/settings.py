@@ -166,3 +166,8 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 
 )
+
+SOCIALACCOUNT_ADAPTER = 'pitchaman.adapter.PitchamanAccountAdapter'
+
+SOCIALACCOUNT_QUERY_EMAIL = True
+LOGIN_REDIRECT_URL = "/profile/"
