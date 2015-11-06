@@ -35,11 +35,13 @@ export default class RangeSlider extends Component {
         slider.noUiSlider.on('update', function(){
             let updateVal = slider.noUiSlider.get();
             let minPrice = updateVal;
+            self.props.onChange(minPrice);
             if(minPrice == 1000.00){
                 minPrice = "1 m"
             } else {
                 minPrice = Math.round(minPrice)+" k"
             }
+
 
             self.setState({priceMin:minPrice})
 
@@ -63,4 +65,5 @@ export default class RangeSlider extends Component {
 }
 
 RangeSlider.propTypes = {
+    onChange:PropTypes.func.isRequired
 }
